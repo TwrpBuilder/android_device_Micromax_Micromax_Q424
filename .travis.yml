@@ -32,3 +32,7 @@ deploy:
     tags: false
     repo: TwrpBuilder/device_Micromax_Micromax_Q424
     branch: master
+
+branches:
+  except:
+    - /^(?i:untagged)-.*$/
