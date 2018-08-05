@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/Micromax/Micromax_Q424
+LOCAL_PATH := device/Micromax/Q424
 
-PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_Micromax_Q424.mk
+PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_Q424.mk

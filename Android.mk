@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter Micromax_Q424,$(TARGET_DEVICE)),)
+ifneq ($(filter Q424,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/Micromax/Micromax_Q424
+LOCAL_PATH := device/Micromax/Q424
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 

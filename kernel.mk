@@ -15,7 +15,7 @@
 #
 
 # Kernel
-TARGET_PREBUILT_KERNEL := device/Micromax/Micromax_Q424/kernel
+TARGET_PREBUILT_KERNEL := device/Micromax/Q424/kernel
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,32N2 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x40000000
 BOARD_KERNEL_PAGESIZE := 2048

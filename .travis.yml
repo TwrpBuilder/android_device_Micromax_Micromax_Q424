@@ -9,18 +9,18 @@ before_script:
   -O $HOME/twrp.tar.xz
 - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_Micromax_Micromax_Q424.git device/Micromax/Micromax_Q424
+  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_Micromax_Q424.git device/Micromax/Q424
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - rm -rf bootable/recovery && git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery
   - |
     docker run --rm -i -v "$(pwd):/root/twrp/:rw,z" surendrajat/twrp-builder bash << EOF
     cd /root/twrp/
-    source build/envsetup.sh && lunch omni_Micromax_Q424-userdebug && make -j16 recoveryimage
+    source build/envsetup.sh && lunch omni_Q424-userdebug && make -j16 recoveryimage
     exit
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/Micromax_Q424/recovery.img $HOME/twrp/TWRP-$version-Micromax_Q424-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/Q424/recovery.img $HOME/twrp/TWRP-$version-Q424-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
@@ -30,7 +30,7 @@ deploy:
   file: $HOME/twrp/*.img
   on:
     tags: false
-    repo: TwrpBuilder/android_device_Micromax_Micromax_Q424
+    repo: TwrpBuilder/android_device_Micromax_Q424
     branch: master
 
 branches:

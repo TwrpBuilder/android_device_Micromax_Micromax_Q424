@@ -14,10 +14,10 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/Micromax/Micromax_Q424
+LOCAL_PATH := device/Micromax/Q424
 
 TARGET_BOARD_PLATFORM := mt6735m
-TARGET_BOOTLOADER_BOARD_NAME := Micromax_Q424
+TARGET_BOOTLOADER_BOARD_NAME := Q424
 
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true

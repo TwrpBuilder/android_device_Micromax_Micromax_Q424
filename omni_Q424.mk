@@ -16,10 +16,10 @@
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
-PRODUCT_COPY_FILES += device/Micromax/Micromax_Q424/kernel:kernel
+PRODUCT_COPY_FILES += device/Micromax/Q424/kernel:kernel
 
-PRODUCT_DEVICE := Micromax_Q424
-PRODUCT_NAME := omni_Micromax_Q424
+PRODUCT_DEVICE := Q424
+PRODUCT_NAME := omni_Q424
 PRODUCT_BRAND := Micromax
 PRODUCT_MODEL := Micromax Q424
 PRODUCT_MANUFACTURER := Micromax
